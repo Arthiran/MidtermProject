@@ -19,9 +19,13 @@ To switch between the modified DLL and original DLL, there is a folder in the ro
 "ModifedPlugin", and anothe called "OriginalPlugin". The ModifiedPlugin folder contains the DLL which generates random positions. The OriginalPlugin folder contains the DLL
 which does not change anything.
 
+In order to change the DLL of the build, you’ll need to open up the Extracted Game from the MidtermBuild.zip file. Then navigate inside the MidtermProject_Data folder, then go inside the Plugins folder, then go inside the x86_64 folder, then copy and paste the dll inside this folder with either the ModifiedPlugin DLL, or OriginalPlugin DLL.
+
 Controls: 
 
 Movement: WASD Keys
 Jump: Space Key
 
 Youtube Demo Video:
+
+https://youtu.be/9GxmHbHcWY8
