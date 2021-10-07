@@ -1,6 +1,7 @@
 // Arthiran Sivarajah - 100660300 : GameObject.cpp
 
 #include "GameObject.h"
+#include <stdlib.h>
 
 GameObject::GameObject()
 {
@@ -18,13 +19,24 @@ void GameObject::SetID(const int id)
 	m_id = id;
 }
 
-Vector2D GameObject::GetPosition() const
+Vector3D GameObject::GetPosition() const
 {
 	return m_position;
 }
 
-void GameObject::SetPosition(const float x, const float y)
+void GameObject::SetPosition(const float x, const float y, const float z)
 {
-	m_position.x = x;
-	m_position.y = y;
+	Vector3D newPos = GenerateRandomPosition();
+	m_position.x = newPos.x;
+	m_position.y = newPos.y;
+	m_position.z = newPos.z;
+}
+
+Vector3D GameObject::GenerateRandomPosition()
+{
+	m_randPosition.x = (rand() % (int)((RandomRange.y - RandomRange.x)) + RandomRange.x);
+	m_randPosition.y = (rand() % (int)((RandomRange.y - RandomRange.x)) + RandomRange.x);
+	m_randPosition.z = (rand() % (int)((RandomRange.y - RandomRange.x)) + RandomRange.x);
+
+	return m_randPosition;
 }

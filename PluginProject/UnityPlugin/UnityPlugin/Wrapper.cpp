@@ -15,12 +15,17 @@ PLUGIN_API void SetID(int id)
 	gameObject.SetID(id);
 }
 
-PLUGIN_API Vector2D GetPosition()
+PLUGIN_API Vector3D GetPosition()
 {
 	return gameObject.GetPosition();
 }
 
-PLUGIN_API void SetPosition(float x, float y)
+PLUGIN_API void SetPosition(float x, float y, float z)
 {
-	gameObject.SetPosition(x, y);
+	gameObject.SetPosition(x, y, z);
+}
+
+PLUGIN_API Vector3D GenerateRandomPosition()
+{
+	return gameObject.GenerateRandomPosition();
 }

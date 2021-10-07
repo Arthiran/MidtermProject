@@ -6,6 +6,7 @@
 
 #include "PluginSettings.h"
 #include "Vector2D.h"
+#include "Vector3D.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -16,9 +17,11 @@ extern "C"
 
 	PLUGIN_API void SetID(int id);
 
-	PLUGIN_API Vector2D GetPosition();
+	PLUGIN_API Vector3D GetPosition();
 
-	PLUGIN_API void SetPosition(float x, float y);
+	PLUGIN_API void SetPosition(float x, float y, float z);
+
+	PLUGIN_API Vector3D GenerateRandomPosition();
 
 #ifdef __cplusplus
 }
