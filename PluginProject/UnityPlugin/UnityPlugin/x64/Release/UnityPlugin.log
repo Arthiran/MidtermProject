@@ -1,0 +1,9 @@
+﻿  GameObject.cpp
+  Main.cpp
+  Wrapper.cpp
+     Creating library C:\Users\arthi\Documents\UnityPlugins\UnityPlugin\x64\Release\UnityPlugin.lib and object C:\Users\arthi\Documents\UnityPlugins\UnityPlugin\x64\Release\UnityPlugin.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 12 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  UnityPlugin.vcxproj -> C:\Users\arthi\Documents\UnityPlugins\UnityPlugin\x64\Release\UnityPlugin.dll
