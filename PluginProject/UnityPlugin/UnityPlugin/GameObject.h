@@ -28,7 +28,7 @@ private:
 	Vector3D m_position;
 	Vector3D m_randPosition;
 
-	Vector2D RandomRange = { 0, 100 };
+	Vector2D RandomRange = { -25, 25 };
 };
 
 #endif /* Defined (__GAME_OBJECT__) */
