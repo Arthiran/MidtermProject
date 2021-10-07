@@ -28,7 +28,7 @@ void GameObject::SetPosition(const float x, const float y, const float z)
 {
 	Vector3D newPos = GenerateRandomPosition();
 	m_position.x = newPos.x;
-	m_position.y = newPos.y;
+	m_position.y = y;
 	m_position.z = newPos.z;
 }
 

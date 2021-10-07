@@ -7,30 +7,24 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    const string PluginName = "UnityPlugin";
-
-    [DllImport(PluginName)]
-    private static extern int GetID();
-
-    [DllImport(PluginName)]
-    private static extern void SetID(int id);
-
-    [DllImport(PluginName)]
-    private static extern Vector3 GetPosition();
-
-    [DllImport(PluginName)]
-    private static extern void SetPosition(float x, float y, float z);
-
-    [DllImport(PluginName)]
-    private static extern Vector3 GenerateRandomPosition(int min, int max);
+    [SerializeField]
+    private GameObject EnemyPrefab;
+    [SerializeField]
+    private int NumEnemies;
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        SetPosition(0,0,0);
-        //Vector3 RandomPosition = GenerateRandomPosition(0, 100);
+        SpawnEnemies();
+    }
 
-        Debug.Log("Generated Random Position: (" + GetPosition().x + ", " + GetPosition().y + ", " + GetPosition().z + ")");
+    private void SpawnEnemies()
+    {
+        for (int i = 0; i < NumEnemies; i++)
+        {
+            GameObject NewEnemy = Instantiate(EnemyPrefab, transform.position, Quaternion.identity);
+            NewEnemy.GetComponent<EnemyController>().SetEnemyID(i);
+        }
     }
 }
 
